@@ -1,4 +1,4 @@
-# HotelReservations-JSP_JDBC
+# HotelReservations
 
 * łącze z rezerwacją nocelgów
 * rezerwacja poprzez formularz
