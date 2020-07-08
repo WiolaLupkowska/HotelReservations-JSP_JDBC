@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Ranking Hoteli- Świat </title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+
+    img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    body{
+      padding-top: 30px;
+      padding-bottom: 50px;
+
+    }
+
+
+    </style>
+  </head><!doctype html>
+
+
+    <body>
+
+
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+</div>
+
+<hr>
+
+      <h1 class="text-center"><b>Ranking najlepszych hoteli świata</b></h1>
+<hr>
+
+
+<table class="table-striped table-bordered" align="center"id="ranking">
+  <tr>
+    <th>nazwa</th>
+    <th>kraj</th>
+    <th>liczba gwiazdek</th>
+    <th>liczba pokoi dwuosobowych </th>
+    <th>cena za noc (EUR)</th>
+  </tr>
+  <tr>
+    <td>Hotel Belvedere</td>
+    <td>Włochy</td>
+    <td>5</td>
+    <td>53</td>
+    <td>295</td>
+  </tr>
+
+  <tr>
+    <td>Viroth's Hotel</td>
+    <td>Kambodża</td>
+    <td>5</td>
+    <td>25</td>
+    <td>250</td>
+  </tr>
+
+  <tr>
+    <td>Kenting Amanda Hotel</td>
+    <td>Tajwan</td>
+    <td>4.5</td>
+    <td>66</td>
+    <td>315</td>
+  </tr>
+
+  <tr>
+    <td>Hotel Alpin Spa Tuxerhof</td>
+    <td>Austria</td>
+    <td>4</td>
+    <td>72</td>
+    <td>430</td>
+  </tr>
+
+  <tr>
+    <td>French Quarter Inn</td>
+    <td>USA</td>
+    <td>4</td>
+    <td>40</td>
+    <td>315</td>
+  </tr>
+
+  <tr>
+    <td>Waldorf Astoria Los Cabos Pedregal</td>
+    <td>Meksyk</td>
+    <td>5</td>
+    <td>38</td>
+    <td>220</td>
+  </tr>
+
+  <tr>
+    <td>Belmond Palacio Nazarenas</td>
+    <td>Peru</td>
+    <td>3</td>
+    <td>72</td>
+    <td>200</td>
+  </tr>
+
+
+</table>
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("ranking");
+  switching = true;
+
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+
+    for (i = 1; i < (rows.length - 1); i++) {
+
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[2];
+      y = rows[i + 1].getElementsByTagName("TD")[2];
+
+      if (Number(x.innerHTML)  < Number(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+sortTable();
+</script>
+
+
+
+      </div>
+    </div>
+
+<br>
+<br>
+    <p class="text-center"> Wróć do <a href="home.html"> strony głównej</a></p>
+      </body>
+    </html>
+
+
+<hr>
+      <footer>
+        <p>&copy; Rankingownia.</p>
+      </footer>
+
+
+    </body>
+</html>
